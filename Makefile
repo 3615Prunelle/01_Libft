@@ -55,7 +55,14 @@ BONUS_SRCS =	ft_lstnew.c \
 
 BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
-all: $(NAME) bonus install
+# If I'm on my own machine (campus or home), update the 98 & 99 Folders - UPDATE ALL MAKEFILES w/ home data (whoamI at home is not schappuy)
+UPDATE_PERSO := $(shell whoami)
+
+ifeq ($(UPDATE_PERSO), schappuy)
+EXTRA := install
+endif
+
+all: $(NAME) bonus $(EXTRA)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
