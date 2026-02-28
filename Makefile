@@ -65,6 +65,12 @@ ifeq ($(CURRENT_DIR), 01_Libft)
 	endif
 endif
 
+ifeq ($(UPDATE_PERSO), prunelle)
+ifeq ($(CURRENT_DIR), 01_Libft)
+		EXTRA := install
+	endif
+endif
+
 all: $(NAME) bonus $(EXTRA)
 
 $(NAME): $(OBJS)
