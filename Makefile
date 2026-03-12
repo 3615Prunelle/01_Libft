@@ -5,53 +5,56 @@ CC = cc
 
 CFLAGS = -Wall -Wextra -Werror -I.
 
-SRCS =	ft_isalpha.c \
-		ft_isdigit.c \
-		ft_isalnum.c \
-		ft_isascii.c \
-		ft_itoa.c \
-		ft_isprint.c \
-		ft_strlen.c \
-		ft_memset.c \
-		ft_bzero.c \
-		ft_memcpy.c \
-		ft_memmove.c \
-		ft_strlcpy.c \
-		ft_strlcat.c \
-		ft_toupper.c \
-		ft_tolower.c \
-		ft_strchr.c \
-		ft_strrchr.c \
-		ft_strncmp.c \
-		ft_strcmp.c \
-		ft_memchr.c \
-		ft_memcmp.c \
-		ft_strnstr.c \
-		ft_atoi.c \
-		ft_calloc.c \
-		ft_strdup.c \
-		ft_substr.c \
-		ft_strjoin.c \
-		ft_strtrim.c \
-		ft_split.c \
-		ft_strmapi.c \
-		ft_striteri.c \
-		ft_putchar_fd.c \
-		ft_putstr_fd.c \
-		ft_putendl_fd.c \
-		ft_putnbr_fd.c
+SRCS =	./sources_libft/ft_isalpha.c \
+		./sources_libft/ft_isdigit.c \
+		./sources_libft/ft_isalnum.c \
+		./sources_libft/ft_isascii.c \
+		./sources_libft/ft_itoa.c \
+		./sources_libft/ft_isprint.c \
+		./sources_libft/ft_strlen.c \
+		./sources_libft/ft_memset.c \
+		./sources_libft/ft_bzero.c \
+		./sources_libft/ft_memcpy.c \
+		./sources_libft/ft_memmove.c \
+		./sources_libft/ft_strlcpy.c \
+		./sources_libft/ft_strlcat.c \
+		./sources_libft/ft_toupper.c \
+		./sources_libft/ft_tolower.c \
+		./sources_libft/ft_strchr.c \
+		./sources_libft/ft_strrchr.c \
+		./sources_libft/ft_strncmp.c \
+		./sources_libft/ft_strcmp.c \
+		./sources_libft/ft_memchr.c \
+		./sources_libft/ft_memcmp.c \
+		./sources_libft/ft_strnstr.c \
+		./sources_libft/ft_atoi.c \
+		./sources_libft/ft_calloc.c \
+		./sources_libft/ft_strdup.c \
+		./sources_libft/ft_substr.c \
+		./sources_libft/ft_strjoin.c \
+		./sources_libft/ft_strtrim.c \
+		./sources_libft/ft_split.c \
+		./sources_libft/ft_strmapi.c \
+		./sources_libft/ft_striteri.c \
+		./sources_libft/ft_putchar_fd.c \
+		./sources_libft/ft_putstr_fd.c \
+		./sources_libft/ft_putendl_fd.c \
+		./sources_libft/ft_putnbr_fd.c \
+		./sources_ft_printf/ft_printf.c \
+		./sources_ft_printf/ft_printf_common_specifiers.c \
+		./sources_ft_printf/ft_printf_hexa_specifiers.c
 
 OBJS = $(SRCS:.c=.o)
 
-BONUS_SRCS =	ft_lstnew.c \
-				ft_lstadd_front.c \
-				ft_lstsize.c \
-				ft_lstlast.c \
-				ft_lstadd_back.c \
-				ft_lstdelone.c \
-				ft_lstclear.c \
-				ft_lstiter.c \
-				ft_lstmap.c \
+BONUS_SRCS =	./sources_libft/ft_lstnew.c \
+				./sources_libft/ft_lstadd_front.c \
+				./sources_libft/ft_lstsize.c \
+				./sources_libft/ft_lstlast.c \
+				./sources_libft/ft_lstadd_back.c \
+				./sources_libft/ft_lstdelone.c \
+				./sources_libft/ft_lstclear.c \
+				./sources_libft/ft_lstiter.c \
+				./sources_libft/ft_lstmap.c
 
 BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 

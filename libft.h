@@ -6,7 +6,7 @@
 /*   By: schappuy <schappuy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 17:07:11 by schappuy          #+#    #+#             */
-/*   Updated: 2025/12/09 15:41:36 by schappuy         ###   ########.fr       */
+/*   Updated: 2026/03/12 18:29:34 by schappuy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,17 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
+# include <stdarg.h>
+# include <stdint.h>
 
-// Structure that defines the composition of a single node in a linked list.
-// I define a structure that I call 's_list' with two members: a void ptr to data and a pointer to the structure itself called next
+# define HEXA_MIN "0123456789abcdef"
+# define HEXA_MAJ "0123456789ABCDEF"
+
 typedef struct s_list
 {
-	void *content;       // Using void * allows me to store any type of data)
-	struct s_list *next; // NULL if the next node is the last one.
+	void *content;
+	struct s_list *next;
 }		t_list;
-// t_list is an alias for struct s_list to make the code shorter and cleaner in the exercises
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -74,5 +76,17 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 void	del(void *param);
+
+// ft_printf
+void			ft_printf(const char *string, ...);
+void			ft_dprintf(int fd, const char *string, ...);
+int				print_to_fd(int fd, const char *string, va_list ptr_string);
+int				specifiers_call(int fd, char c, va_list ptr_string);
+int				c_specifier(int fd, char c);
+int				s_specifier(int fd, char *c);
+int				d_and_i_specifier(int fd, int i);
+unsigned int	u_specifier(int fd, unsigned int i);
+int				p_specifier(int fd, void *p);
+int				x_specifier(int fd, unsigned long long i, char *hexa);
 
 #endif
