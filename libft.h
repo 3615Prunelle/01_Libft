@@ -6,12 +6,16 @@
 /*   By: schappuy <schappuy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 17:07:11 by schappuy          #+#    #+#             */
-/*   Updated: 2026/03/12 18:29:34 by schappuy         ###   ########.fr       */
+/*   Updated: 2026/03/16 17:01:40 by schappuy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1
+# endif
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -88,5 +92,16 @@ int				d_and_i_specifier(int fd, int i);
 unsigned int	u_specifier(int fd, unsigned int i);
 int				p_specifier(int fd, void *p);
 int				x_specifier(int fd, unsigned long long i, char *hexa);
+
+// get_next_line
+char	*get_next_line(int fd);
+void	read_line(int fd, char **buffer, char **line, char **temp);
+void	*ft_calloc_copy(size_t nmemb, size_t size);
+void	*ft_memset_copy(void *str, int constante, size_t taille);
+size_t	ft_strlen_copy(const char *str);
+char	*ft_strchr_mod(const char *s, int c);
+char	*ft_strlcpy_copy(char *dst, const char *src, size_t size);
+char	*ft_strjoin_mod(char *s1, char *s2);
+char	*free_null_three(char **buff, char **line, char **temp);
 
 #endif
